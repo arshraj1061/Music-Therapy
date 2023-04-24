@@ -1,0 +1,22 @@
+.icon {
+    position: relative;
+    top: 25%;
+    height: 40%;
+    cursor: pointer;
+  }
+
+.title{
+    color: #f7ba2b;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    top: 50%;
+}
+
+.slider {
+    display: inline-block;
+    width: 100px;
+    position:relative;
+    top: 65%;
+    
+}

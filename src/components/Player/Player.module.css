@@ -1,0 +1,21 @@
+.PlayerCard {
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+    /* margin: 2%; */
+    border-radius: 14px;
+    background-color: #181818;
+    width: 50%;
+    height: 60px;
+    position: relative;
+    left: 25%;
+    text-align: center;
+    margin: 4% 0%;
+  }
+  
+.icon{
+    font-size: 35px;
+    margin: 2% 14%;
+    /* margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%; */
+    
+}

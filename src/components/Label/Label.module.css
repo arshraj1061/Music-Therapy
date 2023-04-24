@@ -1,0 +1,12 @@
+.text {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    /* text-align: center; */
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 2px 2px 20px rgb(7, 45, 125);
+  }
