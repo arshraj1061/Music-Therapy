@@ -1,10 +1,14 @@
 import React from "react";
 import AudioCard from "../../AudioCard";
-import fire from "../../../assets/audio/fire.mp3";
-import jungle from "../../../assets/audio/jungle.mp3";
-import rain from "../../../assets/audio/rain.mp3";
-import thunder from "../../../assets/audio/thunder.mp3";
-import waves from "../../../assets/audio/waves.mp3";
+import Waves from "../../../assets/audio/Beach/Waves.mp3";
+import Seagulls from "../../../assets/audio/Beach/Seagulls.mp3";
+import Campfire from "../../../assets/audio/Beach/Campfire.mp3";
+import Rain from "../../../assets/audio/Beach/Rain.mp3";
+import Guitar from "../../../assets/audio/Beach/Guitar.mp3";
+import Boat from "../../../assets/audio/Beach/Boat.mp3";
+import Rowboat from "../../../assets/audio/Beach/Rowboat.mp3";
+import Storm from "../../../assets/audio/Beach/Storm.mp3";
+import Melody from "../../../assets/audio/Beach/Melody.mp3";
 import {
   faWater,
   faCrow,
@@ -19,15 +23,15 @@ import {
 
 export default function BeachAudio() {
   const audioSources = [
-    { source: waves, icon: faWater, title: "Waves" },
-    { source: jungle, icon: faCrow, title: "Seagulls" },
-    { source: fire, icon: faFire, title: "Camp Fire" },
-    { source: rain, icon: faCloudRain, title: "Rain" },
-    { source: thunder, icon: faGuitar, title: "Guitar" },
-    { source: thunder, icon: faShip, title: "Ship" },
-    { source: thunder, icon: faSailboat, title: "Boat" },
-    { source: thunder, icon: faCloudBolt, title: "Storm" },
-    { source: thunder, icon: faMusic, title: "Melody" },
+    { source: Waves, icon: faWater, title: "Waves" },
+    { source: Seagulls, icon: faCrow, title: "Seagulls" },
+    { source: Campfire, icon: faFire, title: "Campfire" },
+    { source: Rain, icon: faCloudRain, title: "Rain" },
+    { source: Guitar, icon: faGuitar, title: "Guitar" },
+    { source: Boat, icon: faShip, title: "Boat" },
+    { source: Rowboat, icon: faSailboat, title: "Rowboat" },
+    { source: Storm, icon: faCloudBolt, title: "Storm" },
+    { source: Melody, icon: faGuitar, title: "Melody" },
   ];
 
   function displayAudioCards() {
