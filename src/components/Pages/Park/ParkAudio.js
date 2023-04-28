@@ -1,13 +1,14 @@
 import React from "react";
 import AudioCard from "../../AudioCard";
-import fire from "../../../assets/audio/fire.mp3";
-import jungle from "../../../assets/audio/jungle.mp3";
-import rain from "../../../assets/audio/rain.mp3";
-import thunder from "../../../assets/audio/thunder.mp3";
-import waves from "../../../assets/audio/waves.mp3";
+import Birds from "../../../assets/audio/Park/Birds.mp3";
+import Dog from "../../../assets/audio/Park/Dog.mp3";
+import Ducks from "../../../assets/audio/Park/Ducks.mp3";
+import Fountain from "../../../assets/audio/Park/Fountain.mp3";
+import Kidsplaying from "../../../assets/audio/Park/Kidsplaying.mp3";
+import Lake from "../../../assets/audio/Park/Lake.mp3";
 import {
   faWater,
-  faCrow,
+  faDog,
   faFire,
   faCloudRain,
   faGuitar,
@@ -15,19 +16,19 @@ import {
   faSailboat,
   faCloudBolt,
   faMusic,
+  faChildren,
+  faCrow,
+  faWaterLadder
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function BeachAudio() {
   const audioSources = [
-    { source: waves, icon: faWater, title: "Waves" },
-    { source: jungle, icon: faCrow, title: "Seagulls" },
-    { source: fire, icon: faFire, title: "Camp Fire" },
-    { source: rain, icon: faCloudRain, title: "Rain" },
-    { source: thunder, icon: faGuitar, title: "Guitar" },
-    { source: thunder, icon: faShip, title: "Ship" },
-    { source: thunder, icon: faSailboat, title: "Boat" },
-    { source: thunder, icon: faCloudBolt, title: "Storm" },
-    { source: thunder, icon: faMusic, title: "Melody" },
+    { source: Birds, icon: faCrow, title: "Birds" },
+    { source: Dog, icon: faDog, title: "Dog" },
+    { source: Ducks, icon: faFire, title: "Ducks" },
+    { source: Fountain, icon: faWaterLadder, title: "Fountain" },
+    { source: Kidsplaying, icon: faChildren, title: "Kids playing" },
+    { source: Lake, icon: faWater, title: "Lake" },
   ];
 
   function displayAudioCards() {

@@ -1,33 +1,62 @@
 import React from "react";
 import AudioCard from "../../AudioCard";
-import fire from "../../../assets/audio/fire.mp3";
-import jungle from "../../../assets/audio/jungle.mp3";
-import rain from "../../../assets/audio/rain.mp3";
-import thunder from "../../../assets/audio/thunder.mp3";
-import waves from "../../../assets/audio/waves.mp3";
+import Brownnoise from "../../../assets/audio/Home/Brownnoise.mp3";
+import Cat from "../../../assets/audio/Home/Cat.mp3";
+import Chimney from "../../../assets/audio/Home/Chimney.mp3";
+import Clock from "../../../assets/audio/Home/Clock.mp3";
+import Coffeepot from "../../../assets/audio/Home/Coffeepot.mp3";
+import Drop from "../../../assets/audio/Home/Drop.mp3";
+import Dryer from "../../../assets/audio/Home/Dryer.mp3";
+import Fan from "../../../assets/audio/Home/Brownnoise.mp3";
+import Heartbeat from "../../../assets/audio/Home/Heartbeat.mp3";
+import Keyboard from "../../../assets/audio/Home/Keyboard.mp3";
+import Pinknoise from "../../../assets/audio/Home/Pinknoise.mp3";
+import RainonUmbrella from "../../../assets/audio/Home/RainonUmbrella.mp3";
+import Shower from "../../../assets/audio/Home/Shower.mp3";
+import Vacuum from "../../../assets/audio/Home/Vacuum.mp3";
+import Washingmachine from "../../../assets/audio/Home/Washingmachine.mp3";
+import Whitenoise from "../../../assets/audio/Home/Whitenoise.mp3";
+import Wind from "../../../assets/audio/Home/Wind.mp3";
 import {
   faWater,
-  faCrow,
-  faFire,
-  faCloudRain,
-  faGuitar,
-  faShip,
   faSailboat,
-  faCloudBolt,
   faMusic,
+  faWaveSquare,
+  faClock,
+  faCoffee,
+  faCat,
+  faHouseChimney,
+  faDroplet,
+  faFan,
+  faHeartbeat,
+  faKeyboard,
+  faUmbrella,
+  faShower,
+  faWind,
+  faBox,
+
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function BeachAudio() {
   const audioSources = [
-    { source: waves, icon: faWater, title: "Waves" },
-    { source: jungle, icon: faCrow, title: "Seagulls" },
-    { source: fire, icon: faFire, title: "Camp Fire" },
-    { source: rain, icon: faCloudRain, title: "Rain" },
-    { source: thunder, icon: faGuitar, title: "Guitar" },
-    { source: thunder, icon: faShip, title: "Ship" },
-    { source: thunder, icon: faSailboat, title: "Boat" },
-    { source: thunder, icon: faCloudBolt, title: "Storm" },
-    { source: thunder, icon: faMusic, title: "Melody" },
+    { source: Brownnoise, icon: faWater, title: "Brown noise" },
+    { source: Cat, icon: faCat, title: "Cat" },
+    { source: Chimney , icon:  faHouseChimney, title: "Chimney " },
+    { source: Clock, icon: faClock, title: "Clock" },
+    { source: Coffeepot, icon: faCoffee, title: "Coffee pot" },
+    { source: Drop , icon: faDroplet, title: "Drop" },
+    { source: Dryer, icon: faSailboat, title: "Dryer" },
+    { source: Fan , icon: faFan, title: "Fan" },
+    { source: Heartbeat, icon: faHeartbeat, title: "Heartbeat" },
+    { source: Keyboard, icon: faKeyboard, title: "Keyboard" },
+    { source: Pinknoise, icon: faWaveSquare, title: "Pink noise" },
+    { source: RainonUmbrella, icon: faUmbrella, title: "Rain on Umbrella" },
+    { source: Shower, icon: faShower, title: "Shower" },
+    { source: Vacuum, icon: faMusic, title: "Vacuum" },
+    { source: Washingmachine, icon: faBox, title: "Washing machine" },
+    { source: Whitenoise , icon: faWaveSquare, title: "White noise " },
+    { source: Wind, icon: faWind, title: "Wind" },
+  
   ];
 
   function displayAudioCards() {
