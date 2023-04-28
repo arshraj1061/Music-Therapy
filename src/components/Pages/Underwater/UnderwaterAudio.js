@@ -1,33 +1,23 @@
 import React from "react";
 import AudioCard from "../../AudioCard";
-import fire from "../../../assets/audio/fire.mp3";
-import jungle from "../../../assets/audio/jungle.mp3";
-import rain from "../../../assets/audio/rain.mp3";
-import thunder from "../../../assets/audio/thunder.mp3";
-import waves from "../../../assets/audio/waves.mp3";
+import Airbubbles from "../../../assets/audio/Underwater/Airbubbles.mp3";
+import Sonar from "../../../assets/audio/Underwater/Sonar.mp3";
+import Underthesea from "../../../assets/audio/Underwater/Underthesea.mp3";
+import Whale from "../../../assets/audio/Underwater/Whale.mp3";
 import {
   faWater,
-  faCrow,
-  faFire,
-  faCloudRain,
-  faGuitar,
-  faShip,
-  faSailboat,
-  faCloudBolt,
   faMusic,
+  faUmbrellaBeach,
+  faOtter
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function BeachAudio() {
   const audioSources = [
-    { source: waves, icon: faWater, title: "Waves" },
-    { source: jungle, icon: faCrow, title: "Seagulls" },
-    { source: fire, icon: faFire, title: "Camp Fire" },
-    { source: rain, icon: faCloudRain, title: "Rain" },
-    { source: thunder, icon: faGuitar, title: "Guitar" },
-    { source: thunder, icon: faShip, title: "Ship" },
-    { source: thunder, icon: faSailboat, title: "Boat" },
-    { source: thunder, icon: faCloudBolt, title: "Storm" },
-    { source: thunder, icon: faMusic, title: "Melody" },
+    { source: Airbubbles, icon: faWater, title: "Air Bubbles" },
+    { source: Sonar, icon: faMusic, title: "Sonar" },
+    { source: Underthesea , icon: faUmbrellaBeach, title: "Under the sea " },
+    { source: Whale, icon: faOtter, title: "Whale" },
+ 
   ];
 
   function displayAudioCards() {

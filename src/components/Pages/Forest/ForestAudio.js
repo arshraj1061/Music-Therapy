@@ -1,33 +1,52 @@
 import React from "react";
 import AudioCard from "../../AudioCard";
-import fire from "../../../assets/audio/fire.mp3";
-import jungle from "../../../assets/audio/jungle.mp3";
-import rain from "../../../assets/audio/rain.mp3";
-import thunder from "../../../assets/audio/thunder.mp3";
-import waves from "../../../assets/audio/waves.mp3";
+import Birds from "../../../assets/audio/Forest/Birds.mp3";
+import Campfire from "../../../assets/audio/Forest/Campfire.mp3";
+import Crickets from "../../../assets/audio/Forest/Crickets.mp3";
+import Frogs from "../../../assets/audio/Forest/Frogs.mp3";
+import Owl from "../../../assets/audio/Forest/Owl.mp3";
+import Rainonatent from "../../../assets/audio/Forest/Rainonatent.mp3";
+import River from "../../../assets/audio/Forest/River.mp3";
+import Storm from "../../../assets/audio/Forest/Storm.mp3";
+import TawnyOwl from "../../../assets/audio/Forest/TawnyOwl.mp3";
+import Waterfall from "../../../assets/audio/Forest/Waterfall.mp3";
+import Wind from "../../../assets/audio/Forest/Wind.mp3";
+import Wolf from "../../../assets/audio/Forest/Wolf.mp3";
+import Woodpecker from "../../../assets/audio/Forest/Woodpecker.mp3";
 import {
   faWater,
   faCrow,
-  faFire,
+  faFireBurner,
   faCloudRain,
   faGuitar,
   faShip,
   faSailboat,
   faCloudBolt,
   faMusic,
+  faFire,
+  faTents,
+  faBugs,
+  faFrog,
+  faWaterLadder,
+  faWind,
+  faKiwiBird
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function BeachAudio() {
   const audioSources = [
-    { source: waves, icon: faWater, title: "Waves" },
-    { source: jungle, icon: faCrow, title: "Seagulls" },
-    { source: fire, icon: faFire, title: "Camp Fire" },
-    { source: rain, icon: faCloudRain, title: "Rain" },
-    { source: thunder, icon: faGuitar, title: "Guitar" },
-    { source: thunder, icon: faShip, title: "Ship" },
-    { source: thunder, icon: faSailboat, title: "Boat" },
-    { source: thunder, icon: faCloudBolt, title: "Storm" },
-    { source: thunder, icon: faMusic, title: "Melody" },
+    { source: Birds, icon: faCrow, title: "Birds" },
+    { source: Campfire, icon: faFireBurner, title: "Campfire" },
+    { source: Crickets, icon: faBugs, title: "Crickets" },
+    { source: Frogs, icon: faFrog, title: "Frogs" },
+    { source: Owl, icon: faMusic, title: "Owl" },
+    { source: Rainonatent, icon: faTents, title: "Rain on a tent" },
+    { source: River, icon: faWater, title: "River" },
+    { source: Storm, icon: faCloudBolt, title: "Storm" },
+    { source: TawnyOwl, icon: faMusic, title: "Tawny Owl" },
+    { source: Waterfall, icon: faWaterLadder, title: "Waterfall" },
+    { source: Wind , icon: faWind, title: "Wind " },
+    { source: Wolf, icon: faMusic, title: "Wolf" },
+    { source: Woodpecker , icon: faKiwiBird, title: "Woodpecker " },
   ];
 
   function displayAudioCards() {

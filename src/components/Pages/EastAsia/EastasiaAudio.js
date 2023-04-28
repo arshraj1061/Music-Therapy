@@ -1,10 +1,14 @@
 import React from "react";
 import AudioCard from "../../AudioCard";
-import fire from "../../../assets/audio/fire.mp3";
-import jungle from "../../../assets/audio/jungle.mp3";
-import rain from "../../../assets/audio/rain.mp3";
-import thunder from "../../../assets/audio/thunder.mp3";
-import waves from "../../../assets/audio/waves.mp3";
+import Bamboo from "../../../assets/audio/EastAsia/Bamboo.mp3";
+import Chineseflute from "../../../assets/audio/EastAsia/Chineseflute.mp3";
+import Duduk from "../../../assets/audio/EastAsia/Duduk.mp3";
+import Japanesecicada from "../../../assets/audio/EastAsia/Japanesecicada.mp3";
+import Om from "../../../assets/audio/EastAsia/Om.mp3";
+import Ritual from "../../../assets/audio/EastAsia/Ritual.mp3";
+import Taiko from "../../../assets/audio/EastAsia/Taiko.mp3";
+import Tibetanbowl from "../../../assets/audio/EastAsia/Tibetanbowl.mp3";
+import Windchimes from "../../../assets/audio/EastAsia/Windchimes.mp3";
 import {
   faWater,
   faCrow,
@@ -15,19 +19,24 @@ import {
   faSailboat,
   faCloudBolt,
   faMusic,
+  faOm,
+  faDrum,
+  faBell,
+  faBowlRice
+  
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function BeachAudio() {
   const audioSources = [
-    { source: waves, icon: faWater, title: "Waves" },
-    { source: jungle, icon: faCrow, title: "Seagulls" },
-    { source: fire, icon: faFire, title: "Camp Fire" },
-    { source: rain, icon: faCloudRain, title: "Rain" },
-    { source: thunder, icon: faGuitar, title: "Guitar" },
-    { source: thunder, icon: faShip, title: "Ship" },
-    { source: thunder, icon: faSailboat, title: "Boat" },
-    { source: thunder, icon: faCloudBolt, title: "Storm" },
-    { source: thunder, icon: faMusic, title: "Melody" },
+    { source: Bamboo, icon: faWater, title: "Bamboo" },
+    { source: Chineseflute, icon: faMusic, title: "Chinese flute" },
+    { source: Duduk, icon: faFire, title: "Duduk" },
+    { source: Japanesecicada, icon: faWater, title: "Japanese cicada" },
+    { source: Om, icon: faOm, title: "Om" },
+    { source: Ritual, icon: faMusic, title: "Ritual" },
+    { source: Taiko, icon: faDrum, title: "Taiko" },
+    { source: Tibetanbowl, icon: faBowlRice, title: "Tibetan bowl" },
+    { source: Windchimes, icon: faBell, title: "Windchimes" },
   ];
 
   function displayAudioCards() {
