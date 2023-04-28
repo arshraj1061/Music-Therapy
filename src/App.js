@@ -1,5 +1,6 @@
 import FooterIcons from './components/Icons/FooterIcons';
 import Beach from './components/Pages/Beach/Beach';
+import BinauralBeats from './components/Pages/BinauralBeats/BinauralBeats';
 import City from './components/Pages/City/City';
 import Countryside from './components/Pages/Countryside/Countryside';
 import Eastasia from './components/Pages/EastAsia/Eastasia';
@@ -24,7 +25,7 @@ function App() {
       <Route path="/countryside" element={<Countryside/>} />
       <Route path="/eastasia" element={<Eastasia/>} />
       <Route path="/instrumental" element={<Instrumental/>} />
-      <Route path="/binaural" element={<Forest/>} />
+      <Route path="/binaural" element={<BinauralBeats/>} />
       <Route path="*" element={<Navigate to="/" />} />
 
     </Routes>
