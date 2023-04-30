@@ -11,6 +11,7 @@
     cursor: pointer;
     position: relative;
     top: 50%;
+    width: 100%;
 }
 
 .slider {
@@ -18,5 +19,4 @@
     width: 100px;
     position:relative;
     top: 65%;
-    
 }

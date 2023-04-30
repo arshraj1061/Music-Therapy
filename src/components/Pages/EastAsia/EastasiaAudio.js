@@ -1,5 +1,5 @@
 import React from "react";
-import AudioCard from "../../AudioCard";
+import AudioCard from "../../AudioCard/AudioCard";
 import Bamboo from "../../../assets/audio/EastAsia/Bamboo.mp3";
 import Chineseflute from "../../../assets/audio/EastAsia/Chineseflute.mp3";
 import Duduk from "../../../assets/audio/EastAsia/Duduk.mp3";
@@ -11,13 +11,7 @@ import Tibetanbowl from "../../../assets/audio/EastAsia/Tibetanbowl.mp3";
 import Windchimes from "../../../assets/audio/EastAsia/Windchimes.mp3";
 import {
   faWater,
-  faCrow,
   faFire,
-  faCloudRain,
-  faGuitar,
-  faShip,
-  faSailboat,
-  faCloudBolt,
   faMusic,
   faOm,
   faDrum,
@@ -31,11 +25,11 @@ export default function BeachAudio() {
     { source: Bamboo, icon: faWater, title: "Bamboo" },
     { source: Chineseflute, icon: faMusic, title: "Chinese flute" },
     { source: Duduk, icon: faFire, title: "Duduk" },
-    { source: Japanesecicada, icon: faWater, title: "Japanese cicada" },
+    { source: Japanesecicada, icon: faWater, title: "Japanese Cicada" },
     { source: Om, icon: faOm, title: "Om" },
     { source: Ritual, icon: faMusic, title: "Ritual" },
     { source: Taiko, icon: faDrum, title: "Taiko" },
-    { source: Tibetanbowl, icon: faBowlRice, title: "Tibetan bowl" },
+    { source: Tibetanbowl, icon: faBowlRice, title: "Tibetan Bowl" },
     { source: Windchimes, icon: faBell, title: "Windchimes" },
   ];
 

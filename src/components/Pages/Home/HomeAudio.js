@@ -1,5 +1,5 @@
 import React from "react";
-import AudioCard from "../../AudioCard";
+import AudioCard from "../../AudioCard/AudioCard";
 import Brownnoise from "../../../assets/audio/Home/Brownnoise.mp3";
 import Cat from "../../../assets/audio/Home/Cat.mp3";
 import Chimney from "../../../assets/audio/Home/Chimney.mp3";
@@ -19,7 +19,6 @@ import Whitenoise from "../../../assets/audio/Home/Whitenoise.mp3";
 import Wind from "../../../assets/audio/Home/Wind.mp3";
 import {
   faWater,
-  faSailboat,
   faMusic,
   faWaveSquare,
   faClock,
@@ -34,7 +33,6 @@ import {
   faShower,
   faWind,
   faBox,
-
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function BeachAudio() {
@@ -45,7 +43,7 @@ export default function BeachAudio() {
     { source: Clock, icon: faClock, title: "Clock" },
     { source: Coffeepot, icon: faCoffee, title: "Coffee pot" },
     { source: Drop , icon: faDroplet, title: "Drop" },
-    { source: Dryer, icon: faSailboat, title: "Dryer" },
+    { source: Dryer, icon: faFan, title: "Dryer" },
     { source: Fan , icon: faFan, title: "Fan" },
     { source: Heartbeat, icon: faHeartbeat, title: "Heartbeat" },
     { source: Keyboard, icon: faKeyboard, title: "Keyboard" },

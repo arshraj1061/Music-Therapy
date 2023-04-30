@@ -1,20 +1,8 @@
 import React from "react";
-import AudioCard from "../../AudioCard";
-import fire from "../../../assets/audio/fire.mp3";
-import jungle from "../../../assets/audio/jungle.mp3";
-import rain from "../../../assets/audio/rain.mp3";
-import thunder from "../../../assets/audio/thunder.mp3";
-import waves from "../../../assets/audio/waves.mp3";
+import AudioCard from "../../AudioCard/AudioCard";
+
 import {
-  faWater,
-  faCrow,
-  faFire,
-  faCloudRain,
-  faGuitar,
-  faShip,
-  faSailboat,
-  faCloudBolt,
-  faMusic,
+  
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function BeachAudio() {

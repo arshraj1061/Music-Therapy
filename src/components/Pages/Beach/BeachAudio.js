@@ -1,5 +1,5 @@
 import React from "react";
-import AudioCard from "../../AudioCard";
+import AudioCard from "../../AudioCard/AudioCard";
 import Waves from "../../../assets/audio/Beach/Waves.mp3";
 import Seagulls from "../../../assets/audio/Beach/Seagulls.mp3";
 import Campfire from "../../../assets/audio/Beach/Campfire.mp3";
@@ -18,10 +18,11 @@ import {
   faShip,
   faSailboat,
   faCloudBolt,
-  faMusic,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function BeachAudio() {
+
+
   const audioSources = [
     { source: Waves, icon: faWater, title: "Waves" },
     { source: Seagulls, icon: faCrow, title: "Seagulls" },

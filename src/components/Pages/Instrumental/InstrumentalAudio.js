@@ -1,5 +1,5 @@
 import React from "react";
-import AudioCard from "../../AudioCard";
+import AudioCard from "../../AudioCard/AudioCard";
 import DeepRelax from "../../../assets/audio/Instrumental/DeepRelax.mp3";
 import EveningFall from "../../../assets/audio/Instrumental/EveningFall.mp3";
 import Gymnopedie from "../../../assets/audio/Instrumental/Gymnopedie.mp3";
@@ -9,18 +9,11 @@ import Piano from "../../../assets/audio/Instrumental/Piano.mp3";
 import Violin from "../../../assets/audio/Instrumental/Violin.mp3";
 import {
   faWater,
-  faCrow,
-  faFire,
-  faCloudRain,
   faGuitar,
   faShip,
-  faSailboat,
-  faCloudBolt,
   faMusic,
   faLeaf,
-
 } from "@fortawesome/free-solid-svg-icons";
-import { faBroadcastTower, faWarehouse } from "@fortawesome/fontawesome-free-solid";
 
 export default function BeachAudio() {
   const audioSources = [

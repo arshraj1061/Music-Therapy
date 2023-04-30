@@ -1,5 +1,5 @@
 import React from "react";
-import AudioCard from "../../AudioCard";
+import AudioCard from "../../AudioCard/AudioCard";
 import Airbubbles from "../../../assets/audio/Underwater/Airbubbles.mp3";
 import Sonar from "../../../assets/audio/Underwater/Sonar.mp3";
 import Underthesea from "../../../assets/audio/Underwater/Underthesea.mp3";
@@ -7,16 +7,16 @@ import Whale from "../../../assets/audio/Underwater/Whale.mp3";
 import {
   faWater,
   faMusic,
-  faUmbrellaBeach,
-  faOtter
+  faSoap,
+  faFishFins
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function BeachAudio() {
   const audioSources = [
     { source: Airbubbles, icon: faWater, title: "Air Bubbles" },
     { source: Sonar, icon: faMusic, title: "Sonar" },
-    { source: Underthesea , icon: faUmbrellaBeach, title: "Under the sea " },
-    { source: Whale, icon: faOtter, title: "Whale" },
+    { source: Underthesea , icon: faSoap, title: "Under Sea " },
+    { source: Whale, icon: faFishFins, title: "Whale" },
  
   ];
 

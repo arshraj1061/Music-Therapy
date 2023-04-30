@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
-import classes from "../components/UI/Place.module.css";
+import classes from "./AudioCard.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPause} from "@fortawesome/free-solid-svg-icons";
-import Frame from "./UI/Frame";
+import Frame from "../UI/Frame";
 
 export default function AudioCard({ source, title, dp }) {
   const DEFAULT_VOLUME = 0.5;
@@ -30,7 +30,6 @@ export default function AudioCard({ source, title, dp }) {
   }
 
   function handleClick() {
-    console.log("Clicked");
     setIsPlaying(!isPlaying);
     toggleAudio();
   }
@@ -48,7 +47,7 @@ export default function AudioCard({ source, title, dp }) {
               className={classes.icon}
               icon={faPause}
               size="lg"
-              style={{ color: "f7ba2b" }}
+              style={{ color: "red" }}
               onClick={handleClick}
             />
 

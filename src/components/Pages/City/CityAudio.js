@@ -1,5 +1,5 @@
 import React from "react";
-import AudioCard from "../../AudioCard";
+import AudioCard from "../../AudioCard/AudioCard";
 import Traffic from "../../../assets/audio/Urban/Traffic.mp3";
 import Police from "../../../assets/audio/Urban/Police.mp3";
 import People from "../../../assets/audio/Urban/People.mp3";
@@ -11,7 +11,6 @@ import Pigeons from "../../../assets/audio/Urban/Pigeons.mp3";
 import Airport from "../../../assets/audio/Urban/Airport.mp3";
 import {
   faCar,
-  fa,
   faTrain,
   faPeopleGroup,
   faWind,

@@ -1,5 +1,5 @@
 import React from "react";
-import AudioCard from "../../AudioCard";
+import AudioCard from "../../AudioCard/AudioCard";
 import Birds from "../../../assets/audio/Park/Birds.mp3";
 import Dog from "../../../assets/audio/Park/Dog.mp3";
 import Ducks from "../../../assets/audio/Park/Ducks.mp3";
@@ -10,12 +10,6 @@ import {
   faWater,
   faDog,
   faFire,
-  faCloudRain,
-  faGuitar,
-  faShip,
-  faSailboat,
-  faCloudBolt,
-  faMusic,
   faChildren,
   faCrow,
   faWaterLadder

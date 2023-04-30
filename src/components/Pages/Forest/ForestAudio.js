@@ -1,5 +1,5 @@
 import React from "react";
-import AudioCard from "../../AudioCard";
+import AudioCard from "../../AudioCard/AudioCard";
 import Birds from "../../../assets/audio/Forest/Birds.mp3";
 import Campfire from "../../../assets/audio/Forest/Campfire.mp3";
 import Crickets from "../../../assets/audio/Forest/Crickets.mp3";
@@ -16,14 +16,9 @@ import Woodpecker from "../../../assets/audio/Forest/Woodpecker.mp3";
 import {
   faWater,
   faCrow,
-  faFireBurner,
-  faCloudRain,
-  faGuitar,
-  faShip,
-  faSailboat,
+  faFire,
   faCloudBolt,
   faMusic,
-  faFire,
   faTents,
   faBugs,
   faFrog,
@@ -35,11 +30,11 @@ import {
 export default function BeachAudio() {
   const audioSources = [
     { source: Birds, icon: faCrow, title: "Birds" },
-    { source: Campfire, icon: faFireBurner, title: "Campfire" },
+    { source: Campfire, icon: faFire, title: "Campfire" },
     { source: Crickets, icon: faBugs, title: "Crickets" },
     { source: Frogs, icon: faFrog, title: "Frogs" },
     { source: Owl, icon: faMusic, title: "Owl" },
-    { source: Rainonatent, icon: faTents, title: "Rain on a tent" },
+    { source: Rainonatent, icon: faTents, title: "Rain on tent" },
     { source: River, icon: faWater, title: "River" },
     { source: Storm, icon: faCloudBolt, title: "Storm" },
     { source: TawnyOwl, icon: faMusic, title: "Tawny Owl" },

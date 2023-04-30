@@ -1,5 +1,5 @@
 import React from "react";
-import AudioCard from "../../AudioCard";
+import AudioCard from "../../AudioCard/AudioCard";
 import Birds from "../../../assets/audio/Countryside/Birds.mp3";
 import Cow from "../../../assets/audio/Countryside/Cow.mp3";
 import Dog from "../../../assets/audio/Countryside/Dog.mp3";
@@ -13,13 +13,8 @@ import Storm from "../../../assets/audio/Countryside/Storm.mp3";
 import Wind from "../../../assets/audio/Countryside/Wind.mp3";
 
 import {
-  faWater,
   faCrow,
-  faFire,
   faCloudRain,
-  faGuitar,
-  faShip,
-  faSailboat,
   faCloudBolt,
   faMusic,
   faCow,
