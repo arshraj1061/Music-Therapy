@@ -14,6 +14,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <>
+    <FooterIcons/>
     <Routes>
       
       <Route path="/" element={<Beach/>} />
@@ -30,7 +31,6 @@ function App() {
 
     </Routes>
 
-    <FooterIcons/>
     </>
   );
 }

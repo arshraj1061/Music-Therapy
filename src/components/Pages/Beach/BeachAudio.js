@@ -22,7 +22,6 @@ import {
 
 export default function BeachAudio() {
 
-
   const audioSources = [
     { source: Waves, icon: faWater, title: "Waves" },
     { source: Seagulls, icon: faCrow, title: "Seagulls" },
@@ -37,12 +36,13 @@ export default function BeachAudio() {
 
   function displayAudioCards() {
     return audioSources.map((audio, index) => (
-      <AudioCard
-        key={index}
-        source={audio.source}
-        title={audio.title}
-        dp={audio.icon}
-      />
+     
+        <AudioCard
+          key={index}
+          source={audio.source}
+          title={audio.title}
+          dp={audio.icon}
+        />
     ));
   }
 

@@ -1,6 +1,6 @@
 .icon {
-    margin: 1%;
-    padding: 0% 2%;
+    margin: 1% 1.2% 1% 1.2%;
+    padding: 0% 2.5%;
     font-size: 32px;
     text-align: center;
     text-decoration: overline;
@@ -8,7 +8,7 @@
 
 .icon :hover{
     text-decoration: underline;
-    color: yellowgreen;
+    color: rgb(27, 90, 93);
 }
 
 .footerIcons{
@@ -17,7 +17,9 @@
     border-radius: 14px;
     background-color: #181818;
     width: 96%;
-    height: 65px;
+    height: auto;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .nav a {

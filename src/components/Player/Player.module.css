@@ -8,14 +8,37 @@
     position: relative;
     left: 25%;
     text-align: center;
-    margin: 4% 0%;
+    margin: 1.5% 0%;
+    text-align: center;
+    animation: PlayerCard-appear 1s ease-out forwards;
+    /* animation: PlayerCard-disappear 1s ease-out forwards; */
   }
   
 .icon{
     font-size: 35px;
-    margin: 2% 14%;
-    /* margin-top: 2%;
-    margin-left: 5%;
-    margin-right: 5%; */
-    
+    margin: 2% 14%;    
+}
+
+@keyframes PlayerCard-appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes PlayerCard-disappear {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
 }

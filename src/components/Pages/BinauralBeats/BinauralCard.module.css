@@ -2,12 +2,11 @@
   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.25);
   margin: 6px 2%;
   border-radius: 14px;
-  background-color: rgb(49, 57, 57);
+  background-color: #313939;
   width: 46%;
   height: 98px;
   position: relative;
   display:inline-block;
-  
 }
 
 .inside1{
@@ -16,7 +15,6 @@
   height: 98px;
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
-  /* display: inline-block; */
 }
 
 .inside2{
@@ -25,7 +23,6 @@
   height: 98px;
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
-  /* display: inline-block; */
 }
 
 .inside3{
@@ -34,7 +31,6 @@
   height: 98px;
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
-  /* display: inline-block; */
 }
 
 .inside4{
@@ -43,7 +39,6 @@
   height: 98px;
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
-  /* display: inline-block; */
 }
 
 .inside5{
@@ -52,7 +47,6 @@
   height: 98px;
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
-  /* display: inline-block; */
 }
 
 .icon{
@@ -65,12 +59,26 @@
   text-align: center;
 }
 
+.labelBox {
+  display: inline;
+  text-align: center;
+  width: auto;
+}
+
 .label {
   position: relative;
   bottom: 50%;
   left: 200px;
-  /* margin: 500%; */
   font-size: 30px;
   color: white;
   font-weight: bold;
+}
+
+.detail {
+  color: #acdc6e;
+  display: inline;
+  position: relative;
+  bottom: 25%;
+  left: 470%;
+  width: auto;
 }

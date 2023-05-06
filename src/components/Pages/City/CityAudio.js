@@ -18,10 +18,11 @@ import {
   faDove,
   faCartFlatbedSuitcase,
   faHandcuffs,
-  faIndustry
+  faIndustry,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function BeachAudio() {
+
   const audioSources = [
     { source: Traffic, icon: faCar, title: "Traffic" },
     { source: Police, icon: faHandcuffs, title: "Police" },
@@ -32,18 +33,16 @@ export default function BeachAudio() {
     { source: Rain, icon: faCloudShowersHeavy, title: "Rain" },
     { source: Pigeons, icon: faDove, title: "Pigeons" },
     { source: Airport, icon: faCartFlatbedSuitcase, title: "Airport" },
-    
-    
   ];
 
   function displayAudioCards() {
     return audioSources.map((audio, index) => (
-      <AudioCard
-        key={index}
-        source={audio.source}
-        title={audio.title}
-        dp={audio.icon}
-      />
+        <AudioCard
+          key={index}
+          source={audio.source}
+          title={audio.title}
+          dp={audio.icon}
+        />
     ));
   }
 

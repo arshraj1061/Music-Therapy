@@ -1,11 +1,24 @@
 .card {
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
-  margin: 0px 2%;
+  margin: 1% 2% 1% 2%;
   border-radius: 14px;
-  background-color: rgb(41, 107, 114);
+  background-color: rgb(31, 56, 83);
   width: 96%;
   height: auto;
   position: relative;
   text-align: center;
-  /* top: 35px; */
+  padding: 1% 0% 3% 0%;
+  animation: card-appear 1s ease-in backwards;
+}
+
+@keyframes card-appear {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext} from "react";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 import classes from "./AudioCard.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPause} from "@fortawesome/free-solid-svg-icons";
 import Frame from "../UI/Frame";
+import AudioContext from "../../store/audio-context";
 
 export default function AudioCard({ source, title, dp }) {
   const DEFAULT_VOLUME = 0.5;
   const [audio] = useState(new Audio(source));
   const [isPlaying, setIsPlaying] = useState(false);
+  const audioCtx = useContext(AudioContext);
 
   // Only run upon mounting
   useEffect(
@@ -23,15 +25,32 @@ export default function AudioCard({ source, title, dp }) {
 
   function toggleAudio() {
     if (isPlaying) {
+      if(audioCtx.streaming.length === 1){
+        audioCtx.setShowPlayer(false);
+      }
       audio.pause();
     } else {
       audio.play();
+      
+      audioCtx.setShowPlayer(true);
     }
   }
 
   function handleClick() {
     setIsPlaying(!isPlaying);
     toggleAudio();
+
+    if (audioCtx.streaming.length > 0) {
+      audioCtx.isPlaying = true;
+    }
+    if (audioCtx.streaming.includes(audio)) {
+      audioCtx.streaming.splice(audioCtx.streaming.indexOf(audio), 1);
+    } else {
+      audioCtx.streaming.push(audio);
+    }
+    console.log(audioCtx.streaming);
+    // console.log(audio.paused)
+  
   }
 
   function setVolume(volumeValue) {
@@ -41,6 +60,9 @@ export default function AudioCard({ source, title, dp }) {
   return (
     <span>
       <Frame onClick={handleClick}>
+        
+        {/* <audio src={source} ref={(audioRef)=>{audioCtx.audioRefs.current = audioRef} }></audio> */}
+        
         {isPlaying ? (
           <>
             <FontAwesomeIcon
@@ -48,7 +70,7 @@ export default function AudioCard({ source, title, dp }) {
               icon={faPause}
               size="lg"
               style={{ color: "red" }}
-              onClick={handleClick}
+              onClick={()=>{handleClick(source)}}
             />
 
             <Slider className={classes.slider}
@@ -75,7 +97,7 @@ export default function AudioCard({ source, title, dp }) {
         <p
           className={classes.title}
           onClick={
-            handleClick // Executes handleClick function
+            ()=>{handleClick(source)}   // Executes handleClick function
           }
         >
           {title}
