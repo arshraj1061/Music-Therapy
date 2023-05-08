@@ -1,5 +1,5 @@
 import binaural from "../../../Images/binaural.jpg";
-import BeachBg from "../../BgImage/BgImage";
+import BinauralBg from "../../BgImage/BgImage";
 import Label from "../../Label/Label";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -9,15 +9,15 @@ import {
   faCrosshairs,
   faBrain,
 } from "@fortawesome/free-solid-svg-icons";
-import classes from "./BinauralCard.module.css";
+import classes from "./BinauralBeats.module.css";
 
 function BinauralBeats() {
   return (
     <>
-      <BeachBg src={binaural}>
+      <BinauralBg src={binaural}>
         <Label text="Binaural Beats" />
-      </BeachBg>
-
+      </BinauralBg>
+    
       <div className={classes.cardContainer}>
         <div className={classes.card}>
           <div className={classes.inside1}>

@@ -60,9 +60,7 @@ export default function AudioCard({ source, title, dp }) {
   return (
     <span>
       <Frame onClick={handleClick}>
-        
-        {/* <audio src={source} ref={(audioRef)=>{audioCtx.audioRefs.current = audioRef} }></audio> */}
-        
+                
         {isPlaying ? (
           <>
             <FontAwesomeIcon

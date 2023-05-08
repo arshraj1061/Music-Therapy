@@ -10,6 +10,11 @@ import Instrumental from './components/Pages/Instrumental/Instrumental';
 import Park from './components/Pages/Park/Park';
 import Underwater from './components/Pages/Underwater/Underwater';
 import { Navigate, Route, Routes } from 'react-router-dom';
+import Alpha from './components/Pages/BinauralBeats/Beats/Alpha';
+import Beta from './components/Pages/BinauralBeats/Beats/Beta';
+import Gamma from './components/Pages/BinauralBeats/Beats/Gamma';
+import Delta from './components/Pages/BinauralBeats/Beats/Delta';
+import Theta from './components/Pages/BinauralBeats/Beats/Theta';
 
 function App() {
   return (
@@ -28,6 +33,11 @@ function App() {
       <Route path="/instrumental" element={<Instrumental/>} />
       <Route path="/binaural" element={<BinauralBeats/>} />
       <Route path="*" element={<Navigate to="/" />} />
+      <Route path="/binaural/alpha" element={<Alpha/>} />
+      <Route path="/binaural/beta" element={<Beta/>} />
+      <Route path="/binaural/gamma" element={<Gamma/>} />
+      <Route path="/binaural/delta" element={<Delta/>} />
+      <Route path="/binaural/theta" element={<Theta/>} />
 
     </Routes>
 
