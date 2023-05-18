@@ -48,9 +48,7 @@ export default function AudioCard({ source, title, dp }) {
     } else {
       audioCtx.streaming.push(audio);
     }
-    console.log(audioCtx.streaming);
-    // console.log(audio.paused)
-  
+    console.log(audioCtx.streaming);  
   }
 
   function setVolume(volumeValue) {

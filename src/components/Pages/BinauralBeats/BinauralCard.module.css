@@ -6,12 +6,14 @@
     width: 46%;
     height: auto;
     display:inline-block;
+    margin: 2%;
+    cursor: pointer;
   }
   
   .inside1{
     background-color: #D10000;
     width: 20px;
-    height: 110px;
+    height: 98px;
     border-top-left-radius: 12px;
     border-bottom-left-radius: 14px;
     display: inline-block;
@@ -33,6 +35,7 @@
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
     display: inline-block;
+    
   }
   
   .inside4{
@@ -55,8 +58,8 @@
 
   .info {
     display: inline-block;
-    height: 98px;
-    width: auto;
+    height: auto;
+    width: 88%;
     position: relative;
     padding: 5px 4%;
   }
@@ -66,10 +69,22 @@
     margin: 0%;
   }
 
+  .header{
+    display: flex;
+    justify-content: space-between;
+  }
+
   .frequency{
         font-size: 28px;
         color: aliceblue;
         font-weight: bold;
+        align-self: flex-start;
+  }
+
+  .icon{
+    align-self: flex;
+    font-size: 35px;
+    margin: 0% 2% 0% 0%;
   }
 
   .name{
@@ -81,4 +96,12 @@
   .effect{
     font-size: 20px;
     color: #d1c300;
+    margin: 0% 0% 1% 0%;
+  }
+
+  .slider {
+    display: inline-block;
+    margin: 2% 2%;
+    width: 70%;
+    vertical-align: auto;
   }
