@@ -1,7 +1,11 @@
 const express = require('express');
 const { spawn } = require('child_process');
+const cors = require('cors');
 
 const app = express();
+app.use(cors());
+
+const PORT = 5000;
 
 app.get('/detect-emotion', (req, res) => {
   const pythonProcess = spawn('python', ['D:/Major Pro/binaural/Backend/ML/capture.py']);
@@ -17,6 +21,6 @@ app.get('/detect-emotion', (req, res) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log('Server listening on port 3000');
+app.listen(5000, () => {
+  console.log(`Server listening on port ${PORT}`);
 });

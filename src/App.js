@@ -1,4 +1,4 @@
-import FooterIcons from './components/Icons/FooterIcons';
+import HeaderIcons from './components/Header Icons/HeaderIcons';
 import Beach from './components/Pages/Beach/Beach';
 import BinauralBeats from './components/Pages/BinauralBeats/BinauralBeats';
 import City from './components/Pages/City/City';
@@ -15,14 +15,16 @@ import Beta from './components/Pages/BinauralBeats/Beats/Beta';
 import Gamma from './components/Pages/BinauralBeats/Beats/Gamma';
 import Delta from './components/Pages/BinauralBeats/Beats/Delta';
 import Theta from './components/Pages/BinauralBeats/Beats/Theta';
+import Welcome from './components/Pages/Welcome/Welcome';
 
 function App() {
   return (
     <>
-    <FooterIcons/>
+    <HeaderIcons/>
     <Routes>
       
-      <Route path="/" element={<Beach/>} />
+      <Route path="/" element={<Welcome/>} />
+      <Route path="/beach" element={<Beach/>} />
       <Route path="/forest" element={<Forest/>} />
       <Route path="/city" element={<City/>} />
       <Route path="/underwater" element={<Underwater/>} />

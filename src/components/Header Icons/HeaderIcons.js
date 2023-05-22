@@ -1,13 +1,17 @@
-import classes from './FooterIcons.module.css';
+import classes from './HeaderIcons.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUmbrellaBeach, faTree, faCity, faWater, faCouch, faFootball, faDog, faOm, faGuitar, faBrain } from '@fortawesome/free-solid-svg-icons'
+import { faUmbrellaBeach, faTree, faCity, faWater, faCouch, faFootball, faDog, faOm, faGuitar, faBrain, faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom';
-function FooterIcons() {
+function HeaderIcons() {
 
     return (
-        <div className={classes.footerIcons}>
+        <div className={classes.headerIcons}>
         <nav className={classes.nav}>
             <NavLink to='/' className={navData => navData.isActive ? classes.active : '' }>
+                <FontAwesomeIcon className={classes.icon} icon={faArrowLeftLong} size="2xl" style={{color: "#ac921e",}} />
+            </NavLink>
+
+            <NavLink to='/beach' className={navData => navData.isActive ? classes.active : '' }>
                 <FontAwesomeIcon className={classes.icon} icon={faUmbrellaBeach} size="2xl" style={{color: "#D10000",}} />
             </NavLink>
 
@@ -51,4 +55,4 @@ function FooterIcons() {
     )
 }
 
-export default FooterIcons;
+export default HeaderIcons;

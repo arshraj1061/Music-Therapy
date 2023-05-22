@@ -8,11 +8,12 @@ import random
 import eel
 import winsound
 import sys
+import webbrowser
 
 frequency=5000
 duration=1000
-
-eel.init('WD_INNOVATIVE')
+webbrowser.register('brave', None, webbrowser.BackgroundBrowser("C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe"))
+eel.init(f'{os.path.dirname(os.path.realpath(__file__))}/WD_INNOVATIVE')
 emotions=["angry", "happy", "sad", "neutral"]
 fishface = cv2.face.FisherFaceRecognizer_create()
 font = cv2.FONT_HERSHEY_SIMPLEX
@@ -26,7 +27,7 @@ parser.add_argument("--update", help="Call for taking new images and retraining 
 args=parser.parse_args()    
 facedict={}
 video_capture=cv2.VideoCapture(0)
-facecascade=cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+facecascade=cv2.CascadeClassifier("D:/Major Pro/binaural/Backend/ML/haarcascade_frontalface_default.xml")
 def crop(clahe_image, face):
     for (x, y, w, h) in face:
         faceslice=clahe_image[y:y+h, x:x+w]
@@ -36,7 +37,6 @@ def crop(clahe_image, face):
 
 def grab_face():
     ret, frame=video_capture.read()
-    # cv2.imshow("Video", frame)
     cv2.imwrite('test.jpg', frame)
     cv2.imwrite("images/main%s.jpg" %count, frame)
     gray=cv2.imread('test.jpg',0)
@@ -125,7 +125,7 @@ def getEmotion():
             update_model(emotions)
             break
         elif count==10:
-            fishface.read("model.xml")
+            fishface.read(f'{os.path.dirname(os.path.realpath(__file__))}/model.xml')
             return identify_emotions()
             break
 
@@ -133,9 +133,5 @@ def getEmotion():
 #eel.start('main.html', options=web_app_options)
 #options={'host':'file', 'port': '//'}
 
-eel.start('main.html')#//WD_INNOVATIVE//main.html')
+eel.start(f'{os.path.dirname(os.path.realpath(__file__))}/WD_INNOVATIVE/main.html' ,  mode='brave')
 #, options)
-
-
-'''van Gent, P. (2016). Emotion Recognition With Python, OpenCV and a Face Dataset. A tech blog about fun things with Python and embedded electronics. Retrieved from: http://www.paulvangent.com/2016/06/30/making-an-emotion-aware-music-player/
-'''
