@@ -12,12 +12,13 @@ app.get('/detect-emotion', (req, res) => {
 
   pythonProcess.stdout.on('data', (data) => {
     const emotion = data.toString().trim();
-    res.send(emotion);
+    console.log('Detected emotion:', emotion);
+    // res.send(emotion);
   });
 
   pythonProcess.stderr.on('data', (data) => {
     console.error(`Python error: ${data}`);
-    res.status(500).send('Error detecting emotion');
+    // res.status(500).send('Error detecting emotion');
   });
 });
 

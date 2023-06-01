@@ -53,7 +53,7 @@ var icon=["images\\\\1.jpg",
 "images\\\\10.jpg"];
 
 var mood=[["1","2","3"],["4","5"],["6","7","8"],["9","10"]];
-var mmm=["1.png","1.png","1.png","2.png","2.png","3.png","3.png","3.png","4.png","4.png"];
+var mmm=["4.png","1.png","1.png","2.png","2.png","3.png","4.png","2.png","3.png","4.png"];
 
 var songs=new Array(icon.length);
 for (var i = 0; i<icon.length; i++) {
