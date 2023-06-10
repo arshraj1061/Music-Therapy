@@ -60,10 +60,7 @@ function Alpha(props) {
       freq: 12.0,
       name: "Cognition",
       effect: "Increases Mental Clarity and Focus also Develops Cognitive Performance",
-    },
-    
-   
-    
+    },    
   ];
 
   return alphaAudio.map((audio, index) => (

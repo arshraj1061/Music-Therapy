@@ -15,6 +15,11 @@
   .button:hover::before {
     transform: scaleX(1);
   }
+
+  img{
+    height: 10%;
+    width: 10%;
+  }
   
   .button_content {
     font-size: 24px;

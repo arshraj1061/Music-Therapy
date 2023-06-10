@@ -34,8 +34,6 @@ export const AudioContextProvider = (props) => {
     })
   }
 
-
-
   const contextValue = {
     isPlaying: isPlaying,
     setIsPlaying,
