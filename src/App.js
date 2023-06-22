@@ -1,3 +1,4 @@
+import { Navigate, Route, Routes } from 'react-router-dom';
 import HeaderIcons from './components/Header Icons/HeaderIcons';
 import Beach from './components/Pages/Beach/Beach';
 import BinauralBeats from './components/Pages/BinauralBeats/BinauralBeats';
@@ -9,7 +10,7 @@ import Home from './components/Pages/Home/Home';
 import Instrumental from './components/Pages/Instrumental/Instrumental';
 import Park from './components/Pages/Park/Park';
 import Underwater from './components/Pages/Underwater/Underwater';
-import { Navigate, Route, Routes } from 'react-router-dom';
+import Raga from './components/Pages/Raga/Raga';
 import Alpha from './components/Pages/BinauralBeats/Beats/Alpha';
 import Beta from './components/Pages/BinauralBeats/Beats/Beta';
 import Gamma from './components/Pages/BinauralBeats/Beats/Gamma';
@@ -33,6 +34,7 @@ function App() {
       <Route path="/countryside" element={<Countryside/>} />
       <Route path="/eastasia" element={<Eastasia/>} />
       <Route path="/instrumental" element={<Instrumental/>} />
+      <Route path="/raga" element={<Raga/>} />
       <Route path="/binaural" element={<BinauralBeats/>} />
       <Route path="*" element={<Navigate to="/" />} />
       <Route path="/binaural/alpha" element={<Alpha/>} />

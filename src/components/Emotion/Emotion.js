@@ -21,64 +21,79 @@ function Happy(props) {
   else if (props.emotion === "fear") audioFiles = fearFiles;
   else if (props.emotion === "angry") audioFiles = angryFiles;
 
+  const [currentAudioIndex, setCurrentAudioIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentAudio, setCurrentAudio] = useState("");
+  const [audio, setAudio] = useState(null);
 
   useEffect(() => {
-    // Shuffle the audioFiles array
     const shuffledAudioFiles = shuffleArray(audioFiles);
+    setCurrentAudioIndex(0);
+    setAudio(new Audio(shuffledAudioFiles[0]));
+  }, []);
 
-    // Select the first audio file from the shuffled array
-    const initialAudio = shuffledAudioFiles[0];
-    setCurrentAudio(initialAudio);
+  useEffect(() => {
+    if (audio) {
+      audio.addEventListener('ended', handleAudioEnded);
+      return () => {
+        audio.removeEventListener('ended', handleAudioEnded);
+      };
+    }
+  }, [audio]);
 
-    // Create an instance of the Audio object
-    const audio = new Audio(initialAudio);
-    setIsPlaying(true);
-
-    // Play the audio
-    audio.play();
-
-    // Clean up the audio instance when the component unmounts
-    return () => {
-      audio.pause();
-      audio.currentTime = 0;
-    };
-  }, []); // Empty dependency array ensures the effect runs only once on mount
-
-  // Function to shuffle the array
   const shuffleArray = (array) => {
     const shuffledArray = [...array];
     for (let i = shuffledArray.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      [shuffledArray[i], shuffledArray[j]] = [
-        shuffledArray[j],
-        shuffledArray[i],
-      ];
+      [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
     }
     return shuffledArray;
   };
 
-  const handleButtonClick = () => {
-    setIsPlaying(!isPlaying);
-    if (isPlaying) {
-      // Pause the audio
-      
-      console.log(currentAudio);
-    } else {
-      // Resume playing the audio
-      //   currentAudio.play();
+  const handleAudioEnded = () => {
+    const nextAudioIndex = (currentAudioIndex + 1) % audioFiles.length;
+    setCurrentAudioIndex(nextAudioIndex);
+    setAudio(new Audio(audioFiles[nextAudioIndex]));
+    setIsPlaying(true);
+  };
+  
+  const handlePlayButtonClick = () => {
+    if (audio) {
+      setIsPlaying(true);
+      audio.play();
     }
   };
+  
+  const handlePauseButtonClick = () => {
+    if (audio) {
+      setIsPlaying(false);
+      audio.pause();
+    }
+  };
+  
+  useEffect(() => {
+    if (audio) {
+      audio.addEventListener('ended', handleAudioEnded);
+      return () => {
+        audio.removeEventListener('ended', handleAudioEnded);
+      };
+    }
+  }, [audio, currentAudioIndex]);
+  
+  useEffect(() => {
+    if (isPlaying && audio) {
+      audio.play();
+    }
+  }, [isPlaying, audio]);
 
   return (
-    <button onClick={handleButtonClick}>
-      {isPlaying ? (
-        <FontAwesomeIcon icon={faPause} style={{ color: "f7ba2b" }} />
-      ) : (
-        <FontAwesomeIcon icon={faPlay} style={{ color: "f7ba2b" }} />
-      )}
-    </button>
+    <>
+    <button onClick={handlePlayButtonClick} disabled={isPlaying}>
+    <FontAwesomeIcon icon={faPlay} style={{ color: "f7ba2b" }} />
+      </button>
+      <button onClick={handlePauseButtonClick} disabled={!isPlaying}>
+      <FontAwesomeIcon icon={faPause} style={{ color: "f7ba2b" }} />
+      </button>
+      </>
   );
 }
 

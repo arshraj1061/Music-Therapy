@@ -1,8 +1,6 @@
 import classes from "./BinauralCard.module.css";
-import Slider from "rc-slider";
-import "rc-slider/assets/index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPause, faHeadphones } from "@fortawesome/free-solid-svg-icons";
+import { faPause } from "@fortawesome/free-solid-svg-icons";
 import { useContext, useEffect, useState } from "react";
 import AudioContext from "../../../store/audio-context";
 
@@ -25,7 +23,7 @@ function BinauralCard(props) {
   );
 
   function toggleAudio() {
-    console.log("ye");
+    
     if (isPlaying) {
       audioCtx.setIsPlaying(false);
       audio.pause();
@@ -50,17 +48,13 @@ function BinauralCard(props) {
     }
   }
 
-  function setVolume(volumeValue) {
-    audio.volume = volumeValue;
-  }
-
   return (
     <div className={classes.card} onClick={handleClick}>
       <div className={props.cardStyle} />
 
       <div className={classes.info}>
         <div className={classes.header}>
-          <span className={classes.frequency}>{props.freq} Hz</span>
+          <span className={classes.frequency}>{props.freq}</span>
 
           {isPlaying && (
             <FontAwesomeIcon
@@ -76,23 +70,6 @@ function BinauralCard(props) {
         <p className={classes.effect}>{props.effect}</p>
 
         <audio src={link} />
-
-        {isPlaying && (
-          <div>
-          <FontAwesomeIcon className={classes.icon} icon={faHeadphones} style={{ color: "f7ba2b" }} />
-          <Slider
-            className={classes.slider}
-            min={0}
-            max={1}
-            step={0.01}
-            defaultValue={DEFAULT_VOLUME}
-            onClick={(event) => {
-              // Prevents click event from bubbling up
-            }}
-            onChange={(volumeValue) => setVolume(volumeValue)}
-          />
-          </div>
-        )}
       </div>
     </div>
   );

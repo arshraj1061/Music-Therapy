@@ -1,17 +1,11 @@
 import cv2
 import numpy as np
 from keras.models import model_from_json
-import eel
 import winsound
 import sys
-import webbrowser
 
 frequency=5000
 duration=1000
-# webbrowser.register('brave', None, webbrowser.BackgroundBrowser("C:/Program Files/BraveSoftware/Brave-Browser/Application/brave.exe"))
-# eel.init(f'{os.path.dirname(os.path.realpath(__file__))}/WD_INNOVATIVE')
-# emotions=["angry", "happy", "sad", "neutral"]
-# fishface = cv2.face.FisherFaceRecognizer_create()
  
 facedict={}
 video_capture=cv2.VideoCapture(0)
@@ -93,9 +87,3 @@ for (x, y, w, h) in faces_detected:
 cv2.imshow('Face Emotion Recognition', captured_img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-   
-# @eel.expose
-# def getEmotion():
-# identify_emotions()
-
-# eel.start(f'{os.path.dirname(os.path.realpath(__file__))}/WD_INNOVATIVE/main.html' ,  mode='brave')

@@ -1,6 +1,6 @@
 import classes from './HeaderIcons.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUmbrellaBeach, faTree, faCity, faWater, faCouch, faFootball, faDog, faOm, faGuitar, faBrain, faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
+import { faUmbrellaBeach, faTree, faCity, faWater, faCouch, faFootball, faDog, faOm, faGuitar, faMusic , faBrain, faArrowLeftLong } from '@fortawesome/free-solid-svg-icons'
 import { NavLink } from 'react-router-dom';
 function HeaderIcons() {
 
@@ -45,6 +45,10 @@ function HeaderIcons() {
 
             <NavLink to='/instrumental' className={navData => navData.isActive ? classes.active : '' }>
                 <FontAwesomeIcon className={classes.icon} icon={faGuitar} size="2xl" style={{color: "#D10000",}} />
+            </NavLink>
+
+            <NavLink to='/raga' className={navData => navData.isActive ? classes.active : '' }>
+                <FontAwesomeIcon className={classes.icon} icon={faMusic} size="2xl" style={{color: "#D10000",}} />
             </NavLink>
 
             <NavLink to='/binaural' className={navData => navData.isActive ? classes.active : '' }>

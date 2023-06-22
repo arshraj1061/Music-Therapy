@@ -30,7 +30,8 @@ function BinauralBeats() {
                   color="#D10000"
                   size="2xl"
                 />
-                <span className={classes.label}>Delta</span>
+                <div className={classes.label}>Delta</div>
+                <div className={classes.label}>Deep Sleep and Relaxation</div>
               </div>
             </div>
           </NavLink>
@@ -44,7 +45,8 @@ function BinauralBeats() {
                   color="#f7ba2b"
                   size="2xl"
                 />
-                <span className={classes.label}>Theta</span>
+                <div className={classes.label}>Theta</div>
+                <div className={classes.label}>Anxiety relief, Meditaion</div>
               </div>
             </div>
           </NavLink>
@@ -58,7 +60,8 @@ function BinauralBeats() {
                   color="#acdc6e"
                   size="2xl"
                 />
-                <span className={classes.label}>Alpha</span>
+                <div className={classes.label}>Alpha</div>
+                <div className={classes.label}>Relaxation, Bring Positivity</div>
               </div>
             </div>
           </NavLink>
@@ -72,7 +75,8 @@ function BinauralBeats() {
                   color="#1e93dc"
                   size="2xl"
                 />
-                <span className={classes.label}>Beta</span>
+                <div className={classes.label}>Beta</div>
+                <div className={classes.label}>Improve Concentration, Memory</div>
               </div>
             </div>
           </NavLink>
@@ -86,9 +90,8 @@ function BinauralBeats() {
                   color="#6a1edc"
                   size="2xl"
                 />
-                <div className={classes.labelBox}>
-                  <span className={classes.label}>Gamma</span>
-                </div>
+                  <div className={classes.label}>Gamma</div>
+                  <div className={classes.label}>Enhance Learning, Cognition</div>
               </div>
             </div>
           </NavLink>

@@ -8,10 +8,9 @@ import angry from "../../../assets/Pics/angry.png";
 import surprise from "../../../assets/Pics/surprise.png";
 import neutral from "../../../assets/Pics/neutral.png";
 import fear from "../../../assets/Pics/fear.png";
-
-import happyM from "../../../assets/audio/Emotions/happy.mp3"
-import sadM from "../../../assets/audio/Emotions/sad.mp3"
-import Happy from "../../Emotion/Emotion";
+import Emotion from "../../Emotion/Emotion";
+import { faCamera } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Welcome(props) {
   const [emote, setEmote] = useState(null);
@@ -32,12 +31,12 @@ function Welcome(props) {
     <div>
       <Card>
         <button className={classes.button} onClick={fetchData}>
-          <span className={classes.button_content}>Get Emotion</span>
+          <span className={classes.button_content}>Capture Emotion <FontAwesomeIcon icon={faCamera} style={{ color: "f7ba2b" }} /></span>
         </button>
 
         <NavLink to="/beach">
           <button className={classes.button}>
-            <span className={classes.button_content}>Custom Music</span>
+            <span className={classes.button_content}>Relaxing Music</span>
           </button>
         </NavLink>
 
@@ -58,12 +57,12 @@ function Welcome(props) {
           {emote === "angry" && <img src={angry} alt={emote} />}
           {emote === "fear" && <img src={fear} alt={emote} />}
 
-          {emote === "happy" && <Happy emotion = {emote} />}
-          {emote === "sad" && <Happy emotion = {emote}/>}
-          {emote === "surprise" && <Happy emotion = {emote}/>}
-          {emote === "angry" && <Happy emotion = {emote}/>}
-          {emote === "fear" && <Happy emotion = {emote}/>}
-          {emote === "neutral" && <Happy emotion = {emote}/>}
+          {emote === "happy" && <Emotion emotion = {emote} />}
+          {emote === "sad" && <Emotion emotion = {emote}/>}
+          {emote === "surprise" && <Emotion emotion = {emote}/>}
+          {emote === "angry" && <Emotion emotion = {emote}/>}
+          {emote === "fear" && <Emotion emotion = {emote}/>}
+          {emote === "neutral" && <Emotion emotion = {emote}/>}
         </Card>
       )}
     </div>
