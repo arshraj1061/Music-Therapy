@@ -1,9 +1,15 @@
 import { createContext } from "react";
 import happy from "../assets/audio/Emotions/happy.mp3";
+import happy1 from "../assets/audio/Emotions/happy1.mp3";
+import happy2 from "../assets/audio/Emotions/happy2.mp3";
 import sad from "../assets/audio/Emotions/sad.mp3";
-import M5 from "../assets/audio/Emotions/5.mp3";
-import M6 from "../assets/audio/Emotions/6.mp3";
-import M7 from "../assets/audio/Emotions/7.mp3";
+import sad1 from "../assets/audio/Emotions/sad1.mp3";
+import sad2 from "../assets/audio/Emotions/sad2.mp3";
+import angry1 from "../assets/audio/Emotions/angry1.mp3";
+import angry2 from "../assets/audio/Emotions/angry2.mp3";
+import neutral from "../assets/audio/Emotions/neutral.mp3";
+import neutral1 from "../assets/audio/Emotions/neutral1.mp3";
+import neutral2 from "../assets/audio/Emotions/neutral2.mp3";
 
 const EmotionContext = createContext({
     emotion: '',
@@ -12,12 +18,12 @@ const EmotionContext = createContext({
 
 export const EmotionContextProvider = (props) => {
     const emotionAudio = {
-        happy : [ happy, sad, M5, M6, M7],
-        sad : [ sad, M5, M6, M7],
-        neutral : [ happy, sad, M6, M7],
-        surprise : [ happy, sad, M5, M7],
-        angry : [ happy, sad, M5, M6],
-        fear : [ happy, sad, M6, M7],
+        happy : [ happy, happy1, happy2],
+        sad : [ sad, sad1, sad2],
+        neutral : [neutral, neutral1, neutral2, happy, angry1, angry2],
+        surprise : [ happy2, happy1, happy2, neutral2],
+        angry : [ angry1, angry2, sad2, sad1],
+        fear : [ angry2, sad2, sad1, sad, angry1],
     }
 
 return (
