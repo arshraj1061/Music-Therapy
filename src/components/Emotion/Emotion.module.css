@@ -1,0 +1,11 @@
+.icon{
+    margin: 3px;
+    font-size: 35px;
+}
+
+.button{
+    margin: 1%;
+    border: 3px solid;
+    border-color: rgb(226, 98, 43);
+    border-radius: 22px;
+}

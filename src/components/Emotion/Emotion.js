@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { faPlay, faPause } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import EmotionContext from "../../store/emotion-context";
+import classes from "./Emotion.module.css";
 
 function Happy(props) {
   const emotionAudio = useContext(EmotionContext);
@@ -33,9 +34,9 @@ function Happy(props) {
 
   useEffect(() => {
     if (audio) {
-      audio.addEventListener('ended', handleAudioEnded);
+      audio.addEventListener("ended", handleAudioEnded);
       return () => {
-        audio.removeEventListener('ended', handleAudioEnded);
+        audio.removeEventListener("ended", handleAudioEnded);
       };
     }
   }, [audio]);
@@ -44,7 +45,10 @@ function Happy(props) {
     const shuffledArray = [...array];
     for (let i = shuffledArray.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+      [shuffledArray[i], shuffledArray[j]] = [
+        shuffledArray[j],
+        shuffledArray[i],
+      ];
     }
     return shuffledArray;
   };
@@ -55,30 +59,30 @@ function Happy(props) {
     setAudio(new Audio(audioFiles[nextAudioIndex]));
     setIsPlaying(true);
   };
-  
+
   const handlePlayButtonClick = () => {
     if (audio) {
       setIsPlaying(true);
       audio.play();
     }
   };
-  
+
   const handlePauseButtonClick = () => {
     if (audio) {
       setIsPlaying(false);
       audio.pause();
     }
   };
-  
+
   useEffect(() => {
     if (audio) {
-      audio.addEventListener('ended', handleAudioEnded);
+      audio.addEventListener("ended", handleAudioEnded);
       return () => {
-        audio.removeEventListener('ended', handleAudioEnded);
+        audio.removeEventListener("ended", handleAudioEnded);
       };
     }
   }, [audio, currentAudioIndex]);
-  
+
   useEffect(() => {
     if (isPlaying && audio) {
       audio.play();
@@ -86,14 +90,22 @@ function Happy(props) {
   }, [isPlaying, audio]);
 
   return (
-    <>
-    <button onClick={handlePlayButtonClick} disabled={isPlaying}>
-    <FontAwesomeIcon icon={faPlay} style={{ color: "f7ba2b" }} />
+    <div>
+      <button className={classes.button} onClick={handlePlayButtonClick} disabled={isPlaying}>
+        <FontAwesomeIcon
+          className={classes.icon}
+          icon={faPlay}
+          style={{ color: "f7ba2b" }}
+        />
       </button>
-      <button onClick={handlePauseButtonClick} disabled={!isPlaying}>
-      <FontAwesomeIcon icon={faPause} style={{ color: "f7ba2b" }} />
+      <button className={classes.button} onClick={handlePauseButtonClick} disabled={!isPlaying}>
+        <FontAwesomeIcon
+          className={classes.icon}
+          icon={faPause}
+          style={{ color: "f7ba2b" }}
+        />
       </button>
-      </>
+    </div>
   );
 }
 
